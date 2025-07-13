@@ -17,6 +17,14 @@ app.use(express.static(path.join(__dirname,'public')));
 app.get("/",(req,res) =>{
     res.sendFile(path.join(__dirname,'views','home_page.html'));
 })
+app.get("/users",async (req,res) => {
+    try {
+        const result = await pool.query('select * from users');
+        res.json(result.rows);
+    } catch (error) {
+       res.status(500).json({message:`Veri tabanındaki veriler Serverdan çekilirken hata oluştu- ${error}`}); 
+    }
+})
 app.listen(port,()=>{
     console.log(`Backend Server Is Running On Port ${port} !`);
     dbTest();
