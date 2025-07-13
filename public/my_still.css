@@ -1,0 +1,29 @@
+body {
+  background-color: #eef2f3;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+p {
+  color: #555;
+}
+.main-frame{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  height: auto; 
+  padding: 10px;
+  border: 3px solid black;
+  margin-top: 150px; 
+}
